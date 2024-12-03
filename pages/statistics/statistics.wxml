@@ -1,0 +1,84 @@
+<view class="container">
+  <!-- 时间选择器 -->
+  <view class="time-selector">
+    <view class="selector-tabs">
+      <view class="tab {{isYearMode ? '' : 'active'}}" bindtap="switchToMonth">月度</view>
+      <view class="tab {{isYearMode ? 'active' : ''}}" bindtap="switchToYear">年度</view>
+    </view>
+    <view class="picker-wrapper">
+      <picker mode="date" fields="{{isYearMode ? 'year' : 'month'}}" value="{{currentDate}}" bindchange="onDateChange">
+        <view class="current-time">
+          <text>{{displayDate}}</text>
+          <text class="iconfont icon-arrow-down"></text>
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <!-- 无数据提示 -->
+  <view class="no-data" wx:if="{{!incomeData.length && !expenseData.length}}">
+    <text>暂无收支记录</text>
+  </view>
+
+  <view class="content-wrapper" wx:else>
+    <!-- 收支总览 -->
+    <view class="overview-card">
+      <view class="overview-item">
+        <text class="label">收入</text>
+        <text class="amount income">¥{{overview.income}}</text>
+      </view>
+      <view class="divider"></view>
+      <view class="overview-item">
+        <text class="label">支出</text>
+        <text class="amount expense">¥{{overview.expense}}</text>
+      </view>
+      <view class="divider"></view>
+      <view class="overview-item">
+        <text class="label">结余</text>
+        <text class="amount">¥{{overview.balance}}</text>
+      </view>
+    </view>
+
+    <!-- 收入分类统计 -->
+    <view class="chart-section" wx:if="{{incomeData.length > 0}}">
+      <view class="section-header">
+        <text class="section-title">收入分类统计</text>
+        <view class="detail-btn" bindtap="showIncomeDetail">
+          <text>查看详细</text>
+          <text class="iconfont icon-arrow-right"></text>
+        </view>
+      </view>
+      <view class="category-list">
+        <view class="category-item" wx:for="{{incomeData}}" wx:key="name">
+          <view class="category-info">
+            <text class="iconfont {{item.icon}}"></text>
+            <text class="name">{{item.name}}</text>
+            <text class="percentage">{{item.percentage}}%</text>
+          </view>
+          <text class="amount income">¥{{item.amount}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 支出分类统计 -->
+    <view class="chart-section" wx:if="{{expenseData.length > 0}}">
+      <view class="section-header">
+        <text class="section-title">支出分类统计</text>
+        <view class="detail-btn" bindtap="showExpenseDetail">
+          <text>查看详细</text>
+          <text class="iconfont icon-arrow-right"></text>
+        </view>
+      </view>
+      <view class="category-list">
+        <view class="category-item" wx:for="{{expenseData}}" wx:key="name">
+          <view class="category-info">
+            <text class="iconfont {{item.icon}}"></text>
+            <text class="name">{{item.name}}</text>
+            <text class="percentage">{{item.percentage}}%</text>
+          </view>
+          <text class="amount expense">¥{{item.amount}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view> 

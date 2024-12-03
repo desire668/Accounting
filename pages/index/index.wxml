@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <!-- 顶部卡片：本月收支概览 -->
+    <view class="overview-card">
+      <view class="month-title">{{currentMonth}}</view>
+      <view class="amount-row">
+        <view class="amount-item">
+          <text class="label">收入</text>
+          <text class="amount income">¥{{overview.income}}</text>
+        </view>
+        <view class="amount-item">
+          <text class="label">支出</text>
+          <text class="amount expense">¥{{overview.expense}}</text>
+        </view>
+      </view>
+      <view class="balance-row">
+        <text class="label">结余</text>
+        <text class="amount">¥{{overview.balance}}</text>
+      </view>
+    </view>
+
+    <!-- 快速记账按钮 -->
+    <view class="quick-add">
+      <button class="add-btn expense" bindtap="onAddExpense">
+        <text class="iconfont icon-expense"></text>
+        <text>支出</text>
+      </button>
+      <button class="add-btn income" bindtap="onAddIncome">
+        <text class="iconfont icon-income"></text>
+        <text>收入</text>
+      </button>
+    </view>
+
+    <!-- 最近交易记录 -->
+    <view class="recent-records">
+      <view class="section-title">最近交易</view>
+      <view class="record-list">
+        <view class="record-item" wx:for="{{recentRecords}}" wx:key="id">
+          <text class="category">{{item.category}}</text>
+          <text class="remark" wx:if="{{item.remark}}">{{item.remark}}</text>
+          <text class="amount {{item.type}}">{{item.type === 'expense' ? '-' : '+'}}{{item.amount}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

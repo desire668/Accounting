@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="header">
+    <text class="title">{{type === 'income' ? '收入' : '支出'}}明细</text>
+    <text class="date">{{displayDate}}</text>
+  </view>
+
+  <!-- 无数据提示 -->
+  <view class="no-data" wx:if="{{!records.length}}">
+    <text>暂无记录</text>
+  </view>
+
+  <view class="record-list" wx:else>
+    <view class="record-item" wx:for="{{records}}" wx:key="id">
+      <view class="record-left">
+        <text class="iconfont {{item.category.icon}}"></text>
+        <view class="record-info">
+          <text class="category">{{item.category.name}}</text>
+          <text class="date">{{item.displayDate}}</text>
+        </view>
+      </view>
+      <text class="remark" wx:if="{{item.remark}}">{{item.remark}}</text>
+      <text class="amount {{type}}">¥{{item.amount}}</text>
+    </view>
+  </view>
+</view>

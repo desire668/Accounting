@@ -1,0 +1,230 @@
+.container {
+  padding: 20rpx;
+  background: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 类型切换样式 */
+.type-switch {
+  display: flex;
+  background: #fff;
+  border-radius: 16rpx;
+  margin: 0 10rpx 15rpx 10rpx;
+  padding: 6rpx;
+  position: fixed;
+  top: 20rpx;
+  left: 20rpx;
+  right: 20rpx;
+  z-index: 1;
+}
+
+.type-item {
+  flex: 1;
+  text-align: center;
+  padding: 20rpx 0;
+  border-radius: 12rpx;
+  font-size: 32rpx;
+}
+
+.type-item.active {
+  background: #07c160;
+  color: #fff;
+  font-weight: bold;
+}
+
+.type-item.active.expense {
+  background: #ff4d4f;
+}
+
+/* 金额输入样式 */
+.amount-input {
+  background: #fff;
+  padding: 24rpx;
+  border-radius: 16rpx;
+  margin-bottom: 100rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 200rpx;
+}
+
+.currency {
+  font-size: 44rpx;
+  color: #333;
+  margin-right: 16rpx;
+}
+
+.amount-input input {
+  font-size: 44rpx;
+  flex: 1;
+}
+
+/* 分类选择样式 */
+.category-section {
+  background: #fff;
+  padding: 16rpx;
+  border-radius: 16rpx;
+  margin-bottom: 12rpx;
+  position: fixed;
+  top: 480rpx;
+  left: 20rpx;
+  right: 20rpx;
+  z-index: 1;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 10rpx;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.category-item {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16rpx 24rpx;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+}
+
+.category-icon {
+  font-size: 36rpx;
+  margin-right: 8rpx;
+  margin-bottom: 0;
+}
+
+.category-name {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.category-item.active {
+  background: #f0f0f0;
+  border-radius: 12rpx;
+}
+
+/* 隐藏滚动条 */
+.category-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* 日期和备注表单组样式 */
+.form-group {
+  margin-top: 0;
+  position: fixed;
+  top: 680rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+}
+
+/* 表单项样式 */
+.form-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 12rpx 20rpx;
+  border-radius: 20rpx;
+  margin-bottom: 12rpx;
+  height: 72rpx;
+  box-sizing: border-box;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.02);
+  width: 300rpx;
+}
+
+.label {
+  width: 100rpx;
+  color: #666;
+  font-size: 26rpx;
+}
+
+.picker {
+  flex: 1;
+  font-size: 26rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10rpx;
+}
+
+.picker .icon-arrow-right {
+  color: #999;
+  font-size: 24rpx;
+}
+
+.remark-input {
+  flex: 1;
+  font-size: 26rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+/* 底部按钮样式 */
+.bottom-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16rpx 24rpx calc(16rpx + env(safe-area-inset-bottom));
+  background: #fff;
+  box-shadow: 0 -2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.save-btn {
+  background: #07c160;
+  color: #fff;
+  border-radius: 44rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 32rpx;
+}
+
+.save-btn.expense {
+  background: #ff4d4f;
+}
+
+/* 调整表单组样式 */
+.form-group {
+  margin-top: 0;
+}
+
+/* 日期选择器样式 */
+.form-item picker {
+  width: 100%;
+}
+
+.current-date {
+  display: inline-flex;
+  align-items: center;
+  padding: 16rpx 32rpx;
+  background: #fff;
+  border-radius: 32rpx;
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.current-date .icon-arrow-down {
+  margin-left: 10rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* 备注输入框样式 */
+.form-item:last-child {
+  margin-top: 20rpx;
+  width: 300rpx;
+} 

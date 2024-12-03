@@ -1,0 +1,57 @@
+<view class="container">
+  <!-- 功能列表 -->
+  <view class="function-list" style="width: 574rpx; display: block; box-sizing: border-box">
+    <!-- 通用设置 -->
+    <view class="section-title">通用设置</view>
+    <view class="function-group">
+      <view class="function-item">
+        <view class="item-left">
+          <text class="iconfont icon-notification"></text>
+          <text class="item-name">消息提醒</text>
+        </view>
+        <switch checked="{{notificationEnabled}}" bindchange="toggleNotification" color="#07c160"/>
+      </view>
+
+      <!-- 添加预警设置 -->
+      <view class="function-item">
+        <view class="item-left">
+          <text class="iconfont icon-warning"></text>
+          <text class="item-name">支出预警</text>
+        </view>
+        <input 
+          type="digit" 
+          class="warning-input" 
+          value="{{warningAmount}}" 
+          bindinput="onWarningAmountChange"
+          placeholder="设置预警金额"
+        />
+      </view>
+
+      <view class="function-item" bindtap="clearData">
+        <view class="item-left">
+          <text class="iconfont icon-clear"></text>
+          <text class="item-name">清除数据</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 关于我们 -->
+    <view class="section-title">关于我们</view>
+    <view class="function-group">
+      <view class="function-item" bindtap="navigateTo" data-url="/pages/about/index">
+        <view class="item-left">
+          <text class="iconfont icon-about"></text>
+          <text class="item-name">关于轻记账</text>
+        </view>
+        <text class="version">v1.0.0</text>
+      </view>
+      <view class="function-item" bindtap="showContactInfo">
+        <view class="item-left">
+          <text class="iconfont icon-service"></text>
+          <text class="item-name">联系作者</text>
+        </view>
+        <text class="iconfont icon-arrow-right"></text>
+      </view>
+    </view>
+  </view>
+</view> 

@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "iconfont";
+  src: url('data:font/woff2;charset=utf-8;base64,d09GMgABAAAAAA7...') format('woff2');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* TabBar图标 */
+.icon-home:before {
+  content: "\e600";
+}
+.icon-stats:before {
+  content: "\e601";
+}
+.icon-profile:before {
+  content: "\e602";
+}
+
+/* 记账分类图标 */
+.icon-food:before {
+  content: "\e610";
+}
+.icon-transport:before {
+  content: "\e611";
+}
+.icon-shopping:before {
+  content: "\e612";
+}
+.icon-entertainment:before {
+  content: "\e613";
+}
+.icon-medical:before {
+  content: "\e614";
+}
+.icon-house:before {
+  content: "\e615";
+}
+.icon-salary:before {
+  content: "\e616";
+}
+
+/* 功能图标 */
+.icon-wallet:before {
+  content: "\e620";
+}
+.icon-category:before {
+  content: "\e621";
+}
+.icon-budget:before {
+  content: "\e622";
+}
+.icon-export:before {
+  content: "\e623";
+}
+.icon-backup:before {
+  content: "\e624";
+}
+.icon-notification:before {
+  content: "\e625";
+}
+.icon-clear:before {
+  content: "\e626";
+}
+.icon-about:before {
+  content: "\e627";
+}
+.icon-service:before {
+  content: "\e628";
+}
+.icon-arrow-right:before {
+  content: "\e629";
+}
+.icon-arrow-down:before {
+  content: "\e62a";
+}
+.icon-camera:before {
+  content: "\e62b";
+}
+.icon-income:before {
+  content: "\e62c";
+}
+.icon-expense:before {
+  content: "\e62d";
+}

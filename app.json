@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/record/record",
+    "pages/statistics/statistics",
+    "pages/profile/profile",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "轻记账",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#999999",
+    "selectedColor": "#07c160",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconClass": "icon-home"
+      },
+      {
+        "pagePath": "pages/statistics/statistics",
+        "text": "统计",
+        "iconClass": "icon-stats"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconClass": "icon-profile"
+      }
+    ]
+  }
+}

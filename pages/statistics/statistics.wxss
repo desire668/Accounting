@@ -1,0 +1,206 @@
+.container {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding-bottom: calc(96rpx + env(safe-area-inset-bottom));
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* 时间选择器样式 */
+.time-selector {
+  background: #fff;
+  padding: 30rpx;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+}
+
+.selector-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+
+.tab {
+  padding: 12rpx 40rpx;
+  font-size: 28rpx;
+  color: #666;
+  background: #f5f5f5;
+  margin: 0 10rpx;
+  border-radius: 32rpx;
+  transition: all 0.3s;
+}
+
+.tab.active {
+  background: #07c160;
+  color: #fff;
+}
+
+/* 日期选择器容器 */
+.picker-wrapper {
+  margin-top: -200rpx;
+  padding-top: 200rpx;
+}
+
+.current-time {
+  display: inline-flex;
+  align-items: center;
+  padding: 16rpx 32rpx;
+  background: #f5f5f5;
+  border-radius: 32rpx;
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.icon-arrow-down {
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 8rpx;
+}
+
+/* 确保picker组件在最上层 */
+picker {
+  position: relative;
+  z-index: 101;
+}
+
+/* 修改picker的默认样式 */
+.wx-picker-view {
+  margin-bottom: 100rpx;
+}
+
+.wx-picker-modal {
+  margin-top: -300rpx !important;
+}
+
+/* 内容区域样式 */
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* 概览卡片样式 */
+.overview-card {
+  margin: 30rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.overview-item {
+  flex: 1;
+  text-align: center;
+}
+
+.divider {
+  width: 2rpx;
+  background: #eee;
+  margin: 10rpx 0;
+}
+
+.label {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 10rpx;
+  display: block;
+}
+
+.amount {
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.amount.income {
+  color: #07c160;
+}
+
+.amount.expense {
+  color: #ff4d4f;
+}
+
+/* 分类统计样式 */
+.chart-section {
+  margin: 30rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.section-title {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.detail-btn {
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.detail-btn .icon-arrow-right {
+  font-size: 24rpx;
+  margin-left: 4rpx;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #f5f5f5;
+}
+
+.category-item:last-child {
+  border-bottom: none;
+}
+
+.category-info {
+  display: flex;
+  align-items: center;
+}
+
+.iconfont {
+  font-size: 40rpx;
+  margin-right: 20rpx;
+  color: #666;
+}
+
+.name {
+  font-size: 28rpx;
+  color: #333;
+  margin-right: 20rpx;
+}
+
+.percentage {
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* 无数据提示样式 */
+.no-data {
+  text-align: center;
+  padding: 100rpx 0;
+  color: #999;
+  font-size: 28rpx;
+} 
