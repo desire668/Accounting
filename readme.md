@@ -103,10 +103,10 @@
 
 作者QQ：2082216455
 
-![IMG_9448](C:\Users\1\Downloads\IMG_9448.PNG)
+![IMG_9448](https://github.com/desire668/Accounting/raw/master/IMG_9448.PNG)
 
-![IMG_9449](C:\Users\1\Downloads\IMG_9449.PNG)
+![IMG_9449](https://github.com/desire668/Accounting/raw/master/IMG_9449.PNG)
 
-![IMG_9450](C:\Users\1\Downloads\IMG_9450.PNG)
+![IMG_9450]((https://github.com/desire668/Accounting/raw/master/IMG_9450.PNG)
 
-![IMG_9451](C:\Users\1\Downloads\IMG_9451.PNG)
+![IMG_9451]((https://github.com/desire668/Accounting/raw/master/IMG_9451.PNG)
